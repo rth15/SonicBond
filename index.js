@@ -75,7 +75,7 @@ var logger = new(winston.Logger)({
 });
 
 
-var PORT = 80;
+var PORT = process.env.PORT || 9220;
 
 
 /**
