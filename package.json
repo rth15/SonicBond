@@ -1,11 +1,8 @@
 {
-  "name": "mock-server",
+  "name": "sonic-bond-server",
   "version": "1.0.0",
-  "description": "Mock HTTP Server",
+  "description": "SonicBond Alerts HTTP Server",
   "main": "index.js",
-  "scripts": {
-    "start": "node index.js"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -13,6 +10,6 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.16.2",
-    "winston": "^2.4.0"
+    "winston": "^2.4.1"
   }
 }
