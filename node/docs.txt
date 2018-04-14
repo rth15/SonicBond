@@ -1,0 +1,77 @@
+
+Install Postman for testing
+AlertManager will send request to server
+--Lookup how to send how to send HTTP requests
+Use mypostman.json to test 
+
+Server REST API
+---------------
+
+GET  /get-alerts[?=since] [p]
+POST /get-alerts params: [since]
+
+returns a list of alerts, after the optional id given with since. Example (since=11):
+
+[
+    {
+        "lat": "31.146892",
+        "lon": -83.70274,
+        "location": "Colquitt County",
+        "volume": 0.5,
+        "lan": null,
+        "id": 12
+    },
+    {
+        "lat": "31.146892",
+        "lon": -83.70274,
+        "location": "Colquitt County",
+        "volume": 0.5,
+        "lan": null,
+        "id": 13
+    },
+    {
+        "lat": "31.146892",
+        "lon": -83.70274,
+        "location": "Colquitt County",
+        "volume": 0.5,
+        "lan": null,
+        "id": 14
+    }
+]
+
+
+POST /new-alert
+
+params:
+lat: latitude Number [-90, 90]
+lon: longitude Number [-180, 180]
+location: location string [at least 2 in length]
+volume: how strong is the alert [0.-10.]
+
+returns {id: the id of the inserted alert}
+
+Example:
+
+{
+    "id": 15
+}
+
+
+Server Module
+-------------
+
+SonarAlarmServer
+	SonarAlarmServer();
+	setupEndpoints();
+	addNewAlert(alert);
+	getAlerts(options);
+	loadAlertsFromFile();
+	saveAlertsToFile();
+	start();
+
+
+helpers:
+	validateLat(val);
+	validateLon(val);
+	validateVolume(val);
+	validateLocation(val);
