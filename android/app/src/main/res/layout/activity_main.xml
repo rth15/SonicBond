@@ -45,6 +45,7 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:text="Clear Alerts"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/btnSettings"
         app:layout_constraintHorizontal_bias="0.5"
@@ -81,5 +82,27 @@
         app:layout_constraintStart_toEndOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/btnSettings"
         app:layout_constraintVertical_bias="0.139" />
+
+    <Switch
+        android:id="@+id/switchMute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:text="Mute"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/switchVibration"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/switchVibration"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Switch
+        android:id="@+id/switchVibration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="56dp"
+        android:text="Vibration"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="410dp" />
 
 </android.support.constraint.ConstraintLayout>
